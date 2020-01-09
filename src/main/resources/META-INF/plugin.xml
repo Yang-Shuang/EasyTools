@@ -1,0 +1,35 @@
+<idea-plugin>
+    <id>com.yang.easytools</id>
+    <name>EasyTools</name>
+    <vendor email="409712828@qq.com">Yang Shuang</vendor>
+
+    <description><![CDATA[
+    This is a tools for android develop easier.<br>
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+    <idea-version since-build="171"/>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <toolWindow secondary="true" anchor="bottom" id="Zentao Bug" factoryClass="com.yang.view.ZenTaoBugListWindow"/>
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="Tools.ActivityOpenXml" class="com.yang.action.ActivityOpenXmlAction" text="打开Activity/Xml"
+                description="activity,xml open">
+            <add-to-group group-id="GenerateGroup" anchor="first"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="meta shift L"/>
+        </action>
+        <!--<action id="Tools.GenerateViewVariable" class="com.yang.action.GenerateViewVariableAction"-->
+        <!--text="GenerateViewVariable" description="GenerateViewVariable">-->
+        <!--<add-to-group group-id="GenerateGroup" anchor="first"/>-->
+        <!--<keyboard-shortcut keymap="$default" first-keystroke="shift meta G" second-keystroke="shift meta H"/>-->
+        <!--</action>-->
+        <!--<action id="Tools.test" class="com.yang.action.TestAction" text="test" description="test">-->
+        <!--<add-to-group group-id="GenerateGroup" anchor="first"/>-->
+        <!--<keyboard-shortcut keymap="$default" first-keystroke="shift meta I"/>-->
+        <!--</action>-->
+    </actions>
+</idea-plugin>

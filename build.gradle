@@ -1,0 +1,36 @@
+plugins {
+    id 'org.jetbrains.intellij' version '0.4.15'
+}
+
+group 'com.yang'
+version '1.2.6'
+
+// See https://github.com/JetBrains/gradle-intellij-plugin/
+intellij {
+    version '2019.3.1'
+}
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+patchPluginXml {
+    sinceBuild 171
+    changeNotes """
+     1.使用快捷键跳转到对应的xml页面或者activity、fragment文件<br>
+        匹配规则1 setContentView(R.layout. <br>
+        匹配规则2 .inflate(R.layout. <br>
+        匹配规则3 名称模糊比配，如：frangment_test_show <-->  TestShowFragment,ShowTestFragment,TestShow.....Fragment等<br>
+        匹配规则4 规范Name解析，如：MainActivity <--> activity_main<br>
+        <br>
+      2.添加禅道bug检索.
+      """
+}
+
+dependencies {
+    compile 'org.jsoup:jsoup:1.12.1'
+    compile 'com.github.git-yangshuang:messenger:1.2.0'
+    compile group: 'javazoom', name: 'jlayer', version: '1.0.1'
+    compile group: 'com.alibaba', name: 'fastjson', version: '1.2.58'
+    compile group: 'org.xerial', name: 'sqlite-jdbc', version: '3.28.0'
+}
