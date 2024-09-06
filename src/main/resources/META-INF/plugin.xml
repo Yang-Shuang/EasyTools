@@ -4,7 +4,15 @@
     <vendor email="409712828@qq.com">Yang Shuang</vendor>
 
     <description><![CDATA[
-    This is a tools for android develop easier.<br>
+    This is a tools for android develop easier.
+    1.使用快捷键跳转到对应的xml页面或者activity、fragment文件<br>
+        匹配规则1 setContentView(R.layout. <br>
+        匹配规则2 .inflate(R.layout. <br>
+        匹配规则3 名称模糊比配，如：frangment_test_show <-->  TestShowFragment,ShowTestFragment,TestShow.....Fragment等<br>
+        匹配规则4 规范Name解析，如：MainActivity <--> activity_main<br>
+        <br>
+    2.添加禅道bug检索.
+    <br>
     ]]></description>
 
     <depends>com.intellij.modules.platform</depends>
